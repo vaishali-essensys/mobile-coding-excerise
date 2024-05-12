@@ -7,12 +7,12 @@ Step 1: `mkdir tendable`
 Step 2: `cd tendable`  
 Step 3: `git clone https://github.com/tendable/mobile-coding-excerise.git` # or unzip the repo  
 Step 4: `cd mobile-coding-excerise`  
-Step 4: `python -m venv tvenv` # name of virtual environment  
-Step 5: `source tvenv/bin/activate`  # On Windows: tvenv\Scripts\activate  
-Step 6: `pip install -r requirements.txt`  
-Step 7: `python run.py`  
+Step 5: `python -m venv tvenv` # name of virtual environment  
+Step 6: `source tvenv/bin/activate`  # On Windows: tvenv\Scripts\activate  
+Step 7: `pip install -r requirements.txt`  
+Step 8: `python run.py`  
 
-This will launch the server on localhost:5001 or http://127.0.0.1:5001. You will see the conect of Readme on the landing page
+This will launch the server on http://localhost:5001 or http://127.0.0.1:5001. You will see the conect of Readme on the landing page
 
 Please use the API documentation as guidance. It is not necessary that you use all of these to complete the test.
 

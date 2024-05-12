@@ -74,7 +74,7 @@ def inspection_file(inspectionId):
 ################
 
 users = {}
-globalInspectionCounter = 0
+globalInspectionCounter = 1
 
 ##########
 # Routes #
@@ -84,7 +84,8 @@ globalInspectionCounter = 0
 def generate_random_inspections(count):
     path = "inspections"
     for index in range(int(count)):
-        filename = "inspection" + str(index) + ".json"
+        id = index + 1
+        filename = "inspection" + str(id) + ".json"
         random_inspection = generate_random_inspection(index)
         with open(path + "/" + filename, 'w') as fp:
             json.dump(random_inspection, fp)
@@ -160,7 +161,6 @@ def startInspection():
 
 @app.route('/api/inspections/submit', methods=['POST'])
 def submitInspection():
-    global globalInspectionCounter
 
     body = request.json
     inspectionId = body["inspection"]["id"]
@@ -177,7 +177,7 @@ def submitInspection():
 
 @app.route("/")
 def tendable():
-    return "Readme"
+    return "The Tendable flask service is up and running"
 
 
 if __name__ == "__main__":
